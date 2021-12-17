@@ -26,3 +26,16 @@ body {
     display: grid;
     justify-items: center;
 }
+
+.display-calculation-container{
+    font-size: 32px;
+    
+    .display-calculation {
+        &__show{
+            display: block;
+        }
+        &__hide{
+            display: none;
+        }
+    }
+}

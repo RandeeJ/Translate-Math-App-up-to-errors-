@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import Language from './language';
-import Calculation from './calculation';
 import Translation from './translation';
+import Calculation from './calculation';
 
 export default class App extends Component {
   render() {

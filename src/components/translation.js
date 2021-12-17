@@ -26,8 +26,9 @@ export default class Translation extends Component {
                <p>
                    Show translation here
 
-                   {/* {one}
-                   {three} */}
+                   {one}
+                   {four}
+                   {three}
                    </p>
 
             </div>

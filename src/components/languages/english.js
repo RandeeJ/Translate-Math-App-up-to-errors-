@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import n2words from 'n2words';
 
 
-export default class Spanish extends Component {
+export default class English extends Component {
     constructor(){
         super();
 
         this.state={
-            languageTitle: "Spanish"
+            languageTitle: "English"
         }
     }
     render() {
@@ -15,19 +15,19 @@ export default class Spanish extends Component {
         var n2words = require('n2words');
 
         const one = n2words(123);
-        const three = n2words(123, {lang: 'es'}) ;
+        const two = n2words(123, {lang: 'en'}) ;
         
         const { languageTitle } = this.state
         return (
             <div>
-                    <h2>{languageTitle} translation</h2>
-                    
+                <h2>{languageTitle} translation</h2>
+
                 <div>
-                    {one}
+                {one}
                 </div>
 
                 <div>
-                    {three}
+                {two}
                 </div>
             </div>
         );

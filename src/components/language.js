@@ -18,9 +18,9 @@ export default class Language extends Component {
         }
     }
 
-    handleClick= () => {
-        this.setState({language: this.state.language})
-    }
+    // handleClick= () => {
+    //     this.setState({language: this.state.language})
+    // }
 
     Spanish() {
         this.setState({language: "Spanish"})

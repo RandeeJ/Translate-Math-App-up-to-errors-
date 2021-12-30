@@ -10,6 +10,10 @@ export default class English extends Component {
             languageTitle: "English"
         }
     }
+
+componentDidMount() {
+}
+
     render() {
 
         var n2words = require('n2words');
@@ -17,7 +21,8 @@ export default class English extends Component {
         const one = n2words(123);
         const two = n2words(123, {lang: 'en'}) ;
         
-        const { languageTitle } = this.state
+        const { languageTitle } = this.state;
+
         return (
             <div>
                 <h2>{languageTitle} translation</h2>

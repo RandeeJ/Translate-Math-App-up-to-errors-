@@ -17,19 +17,26 @@ class Calculation extends Component {
     // }
 
 
-        addition = () => {
-            const valOne = 2;
-            const valTwo = 3;
-            const Sum = valOne + valTwo;
-            
-            console.log("addition button", Sum)
-        }
+        
         
 
     render() {
 
         // const { handleSubmit } = this.props;
         
+        const Addition = () => {
+            const valOne = 2;
+            const valTwo = 3;
+            const Sum = valOne + valTwo;
+            
+            console.log("addition button", Sum)
+            return(
+                <div>
+                {valOne} + {valTwo} = {Sum}
+                </div>
+            )
+        }
+
              
         return (
             // <form onSubmit={handleSubmit}>
@@ -57,6 +64,8 @@ class Calculation extends Component {
                         component = {FormButton}
                     />
                 </div>
+
+                <h2> <Addition/> </h2>
 
 
                

@@ -1,12 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+// import React from "react";
+// import ReactDOM from "react-dom";
+// import { BrowserRouter, Route, Link } from "react-router-dom";
 
-import App from "./components/app";
+// import App from "./components/app";
 
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.querySelector(".app-wrapper")
-);
+// ReactDOM.render(
+//   <BrowserRouter>
+//     <App />
+//   </BrowserRouter>,
+//   document.querySelector(".app-wrapper")
+// );

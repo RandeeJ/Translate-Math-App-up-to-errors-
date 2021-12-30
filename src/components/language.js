@@ -23,18 +23,18 @@ export default class Language extends Component {
     // }
 
     Spanish() {
-        this.setState({language: "Spanish"})
-        console.log(this.state.sum);
+        // this.setState({language: "Spanish"})
+        // console.log(this.state.sum);
     }
 
     French() {
-        this.setState({language: "French"})
-        console.log(this.state.sum);
+        // this.setState({language: "French"})
+        // console.log(this.state.sum);
     }
 
     English() {
-        this.setState({language: "English"})
-        console.log(this.state.sum);
+        // this.setState({language: "English"})
+        // console.log(this.state.sum);
     }
 
 
@@ -51,7 +51,7 @@ export default class Language extends Component {
                 <div>
                 <NavLink to="/english">
                 <button className="EnglishBtn" 
-                onClick = {() => {this.English()}} 
+                // onClick = {() => {this.English()}} 
                 type="submit"
                 title="English">
                     English
@@ -63,7 +63,7 @@ export default class Language extends Component {
                 <div>
                 <NavLink to="/french">
                 <button className="FrenchBtn" 
-                onClick = {() => {this.French()}} 
+                // onClick = {() => {this.French()}} 
                 type="submit"
                 title="French">
                     French
@@ -74,7 +74,7 @@ export default class Language extends Component {
                 <div>
                 <NavLink to="/spanish">
                 <button className="spanishBtn" 
-                onClick = {() => {this.Spanish()}} 
+                // onClick = {() => {this.Spanish()}} 
                 type="submit"
                 title="Spanish">
                     Spanish

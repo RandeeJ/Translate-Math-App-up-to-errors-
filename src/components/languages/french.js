@@ -15,7 +15,7 @@ export default class French extends Component {
         var n2words = require('n2words');
 
         const one = n2words(123);
-        const two = n2words(123, {lang: 'en'}) ;
+        const two = n2words(123, {lang: 'fr'}) ;
         
         const { languageTitle } = this.state
         return (

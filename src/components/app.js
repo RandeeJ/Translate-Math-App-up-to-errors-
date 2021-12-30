@@ -11,9 +11,9 @@ export default class App extends Component {
     super(props);
 
 
-    this.state = {
-        toggleText: false
-    }
+    // this.state = {
+    //     toggleText: false
+    // }
 }
   render() {
     return (

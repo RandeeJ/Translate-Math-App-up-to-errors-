@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
-import { Sum } from './calculation';
+// import { Sum } from './calculation';
 // import n2words from 'n2words';
 
 import { NavLink } from "react-router-dom"
 
-import Translation from './translation';
+// import Translation from './translation';
  
 
 export default class Language extends Component {
 
-    constructor(){
-        super()
+    // constructor(){
+    //     super()
 
-    this.state = {
-        language: "",
-        sum: Sum
-        }
-    }
+    // this.state = {
+    //     language: "",
+    //     sum: Sum
+    //     }
+    // }
 
     // handleClick= () => {
     //     this.setState({language: this.state.language})

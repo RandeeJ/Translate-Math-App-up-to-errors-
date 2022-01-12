@@ -9,18 +9,8 @@ import French from './languages/french';
 
 class Translation extends Component {
 
-//     constructor(props){
-//         super(props);
-
-//         this.state = {
-//             language: ""
-//         }
-//     }
-
-
     render() {
 
-// export default function() {
         return (
 
             <div>

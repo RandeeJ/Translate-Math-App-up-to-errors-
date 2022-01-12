@@ -10,10 +10,6 @@ export default class App extends Component {
   constructor(props){
     super(props);
 
-
-    // this.state = {
-    //     toggleText: false
-    // }
 }
   render() {
     return (
@@ -35,14 +31,8 @@ export default class App extends Component {
 
           <div className="translation-container">
             <div className='display-calculation-container'>
-                    {/* { 
-                            // this.state.toggleText ? */}
-                                      <Translation/>
-                                      {/* : */}
-                                      {/* console.log("no translation") */}
-                    {/* }                         */}
-            </div>           
-                
+            <Translation/>
+            </div>
           </div>
       </div>
     );

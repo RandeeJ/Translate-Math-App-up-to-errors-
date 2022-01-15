@@ -1,43 +1,67 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 
-class Number extends Component {
-    constructor(props) {
-      super(props);
+// class Numbers extends Component {
+//     constructor(props) {
+//       super(props);
 
+//       this.state = {
+//           valueOne: {valueOne},
+//           valueTwo: {valueTwo}
+//       }
   
-      this.handleChange = this.handleChange.bind(this);
-    //   this.handleSubmit = this.handleSubmit.bind(this);
-    }
+//       // this.handleChange = this.handleChange.bind(this);
+//       this.handleSubmit = this.handleSubmit.bind(this);
+//     }
   
-    handleChange(event) {
-      this.setState({value: event.target.value});
-    }
+//     // handleChange(event) {
+//     //   this.setState(
+//     //       valueOne = event.target.value,
+//     //       valueTwo = event.target.value
+//     //   );
+//     // }
   
-    // handleAddition(event) {
-    //     alert("ok")
-    //   event.preventDefault();
-    // }
+//     handleSubmit(event) {
+//       const valueOne = event.target.value;
+//       const valueTwo = event.target.value;
+//         console.log(this.state.valueOne, this.state.valueTwo, event.target.value);
+
+//         event.preventDefault();
+
+//         //     return(
+//         //     <div className="display">
+//         //         {this.state.valueOne} + {this.state.valueTwo}
+//         //     </div>
+//         // )
+// }
   
-    render() {
-      return (
-        <form 
-        // onSubmit={this.handleAddition}
-        >
+//     render() {
+//       const {}
+//       return (
+//         <form 
+//         onSubmit={this.handleSubmit}
+//         >
 
-          <label>
-            <input type="number"
-            className="valueOne"
-            onChange={this.handleChange} />
-            <input type="number"
-            className="valueTwo"
-            onChange={this.handleChange} />
+//           {/* <label> */}
+//             <input type="number"
+//             className="number__valueOne"
+//             placeholder = "Value One"
+//             // onChange={this.handleChange}
+//             />
+//             <input type="number"
+//             className="number__valueTwo"
+//             placeholder = "Value Two"
+//             // onChange={this.handleChange}
+//             />
 
-          </label>
-          <input type="submit" value="Addition" />
-          {/* <input type="submit" value="Subtraction" /> */}
-        </form>
-      );
-    }
-  }
+//           {/* </label> */}
+//           <input type="submit" value="Submit" />
 
-export default Number;
+//             {/* <HandleSubmit /> */}
+
+//           {/* <input type="submit" value="Subtraction" /> */}
+//         </form>
+//       );
+//     }
+//   }
+
+// export default Numbers;

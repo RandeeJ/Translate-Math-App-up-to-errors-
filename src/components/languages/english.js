@@ -2,39 +2,58 @@ import React, { Component } from 'react';
 import n2words from 'n2words';
 
 
-export default class English extends Component {
-    constructor(){
-        super();
+class English extends Component {
+    constructor(props){
+        super(props);
 
         this.state={
-            languageTitle: "English"
+            languageTitle: "English",
+            // operation: {
+            //     addition
+            }
         }
-    }
+    
 
-componentDidMount() {
-}
+    // you are trying to get the languages to work - right now the numbers work, but not the answers...
+    // answers ... only if language is made a child component of the operation files also....
+    // you are trying to get the operations to show in the translation, or if you can find out how to get the words for each language that passes into a variable - maybe this is a place where bind comes into play! bind can allow you to use certain variables based on what is called... and then you would need to link those to a button...the button for the language
+    // GOOD JOB YESTERDAY! feel free to do other work today... you did good.
+    // or rather, 3 more videos!!
 
     render() {
 
         var n2words = require('n2words');
 
-        const one = n2words(123);
-        const two = n2words(123, {lang: 'en'}) ;
+        const {valueOne, valueTwo,
+            // valueAnswer
+        } = this.props;
+
+        const englishOne = n2words(valueOne, {lang: 'en'});
+        const englishTwo = n2words(valueTwo, {lang: 'en'});
+        // const englishAnswer = n2words(valueAnswer, {lang: 'en'})
         
-        const { languageTitle } = this.state;
+        
+        const { languageTitle, 
+            // operation 
+        } = this.state;
+
+        console.log("english component", valueOne)
 
         return (
             <div>
                 <h2>{languageTitle} translation</h2>
 
                 <div>
-                {one}
-                </div>
+                {englishOne} 
+                {/* {operation}  */}
+                {englishTwo} 
+                {/* {englishAnswer} */}
 
-                <div>
-                {two}
+
                 </div>
             </div>
         );
     }
 }
+
+export default English;

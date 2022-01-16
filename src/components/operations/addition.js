@@ -6,39 +6,27 @@ class Addition extends Component {
     constructor(props){
         super(props);
 
+        this.state ={
+            name: "operation"
+        };
+
+        console.log("we working");
     }
-
-addValues = () => {
-    const {valueOne, valueTwo } = this.props;
-    const valueSum = valueOne + valueTwo;
-    console.log("addValues ", valueOne)
-    console.log("addValues ",  valueTwo)
-    console.log("addValues function", valueSum)
     
-}
-
-render() {
-
-    const {valueOne, valueTwo } = this.props;
-    const valueSum = valueOne + valueTwo;
-
-
-
-    return(
-        <div>
-            <button className="additionBtn" onClick={() => {this.addValues()}}>
-                Addition
-            </button>
-
-            <h1>
-                {valueOne} + {valueTwo} = {valueSum}
-            </h1>
-
-        </div>
-        )
+    render() {
+        const {valueOne, valueTwo } = this.props;
+        const valueAnswer = valueOne + valueTwo;
+            return(
+                <div>
+                    {valueOne} + {valueTwo} = {valueAnswer}
+                </div>
+            )
     }
 }
 
 
 export default Addition;
 
+
+// thinking about how to render the equation when the button is clicked
+// componentdidmount - does that mean when the button is clicked that thats when everything will show?

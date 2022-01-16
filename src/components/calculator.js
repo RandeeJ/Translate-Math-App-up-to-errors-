@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import Calculation from "./calculation";
-// import { Form } from "redux-form";
 
 class Calculator extends Component {
     constructor(props){
@@ -29,8 +28,6 @@ class Calculator extends Component {
 handleChange = ({ target }) => {
     this.setState({ [ target.name ] : target.value});
 };
-
-
 
 
     render () {
@@ -67,20 +64,9 @@ handleChange = ({ target }) => {
 
 
 
-
-
             <Calculation valueOne={valueOne} valueTwo={valueTwo}/>
 
 
-
-
-
-
-
-
-
-
-        
           </div>
         )
 
@@ -93,26 +79,3 @@ handleChange = ({ target }) => {
 
 
 export default Calculator
-//     const valueOne = props.valueOne;
-//     const valueTwo = props.valueTwo;
-
-//     //   this.handleChange = this.handleChange.bind(this);
-
-
-// return (
-//     <div className="numbers-input">
-//     <label>
-//         <input type="number"
-//         className="valueOne"
-//         // onChange={this.handleChange} 
-//         />
-//         <input type="number"
-//         className="valueTwo"
-//         // onChange={this.handleChange} 
-//         />
-//     </label>
-//     </div>
-//     )
-// }
-
-// export default Numbers

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Language from './language';
 import Translation from './translation';
-import Calculation from './calculation';
+import Calculator from './calculator';
 
 export default class App extends Component {
 
@@ -21,8 +21,8 @@ export default class App extends Component {
 
           
 
-          <div className="calculation-container">
-            <Calculation />
+          <div className="calculator-container">
+            <Calculator />
           </div>
 
           <div className="language_container">

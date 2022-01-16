@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Addition from './operations/addition';
-import Numbers from './Numbers2';
 
 // import Subtraction from './operations/subtraction';
 // import Multiplication from './operations/multiplication';
@@ -11,43 +10,47 @@ class Calculation extends Component {
 
     constructor(props){
         super(props);
+       
+        // this.state={
+        //     valueOneCurrent:0,
+        //     valueTwo:0
+        // }
+       
+        // console.log(props.valueOne)
 
-        this.state = {
-
-        }
+       // this.addValues=this.addValues.bind(this);
     }
 
 
 
-    // PUT FUNCTIONS OUTSIDE THE RENDER 
-    // receive 2 arguments and return a string
-          
-addValues () {
-    this.setState({
-
-    })
-}
-
 
     render() {
              
-        const valueOne = this.state.valueOne;
-        const valueTwo = this.state.valueTwo;
+        const {valueOne, valueTwo } = this.props;
+
+        
+
 
         return (
             <div>
-
-                <Numbers/>
-
                 <div className="select-operation-container">
-                    <button className="additionBtn" onClick={() => {this.addValues()}}>
-                        Addition
-                    </button>
+                   
+                
+                <Addition valueOne={valueOne} valueTwo ={valueTwo} /> 
+
+
                 </div>
-                <Addition valueOne={valueOne} valueTwo ={valueTwo} />
+
+
             </div>
         );
-    }}
+
+        
+    }
+
+    
+
+}
 
 
 

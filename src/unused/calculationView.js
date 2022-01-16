@@ -1,9 +1,9 @@
 import React, {useState, Component} from "react"
-import Addition from "./operations/addition"
-import Multiplication from "./operations/multiplication"
+import Addition from "../components/operations/addition"
+import Multiplication from "../components/operations/multiplication"
 
 
-function ShowCalculation(){
+class ShowCalculation extends Component{
 
     constructor(props){
         super(props); 

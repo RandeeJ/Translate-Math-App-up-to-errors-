@@ -64,8 +64,9 @@ handleChange = ({ target }) => {
 
 
 
-            <Calculation valueOne={valueOne} valueTwo={valueTwo}/>
-
+            <h1>
+                <Calculation valueOne={valueOne} valueTwo={valueTwo}/>
+            </h1>
 
           </div>
         )

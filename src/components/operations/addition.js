@@ -9,8 +9,6 @@ class Addition extends Component {
         this.state ={
             name: "operation"
         };
-
-        console.log("we working");
     }
     
     render() {

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
-export default class Multiplication extends Component {
+
+class Multiplication extends Component {
+
     constructor(props){
         super(props);
 
@@ -8,11 +10,17 @@ export default class Multiplication extends Component {
             name: "operation"
         };
     }
+    
     render() {
-        return (
-            <div>
-                multiplication
-            </div>
-        );
+        const {valueOne, valueTwo } = this.props;
+        const valueAnswer = valueOne * valueTwo;
+            return(
+                <div>
+                    {valueOne} * {valueTwo} = {valueAnswer}
+                </div>
+            )
     }
 }
+
+
+export default Multiplication;

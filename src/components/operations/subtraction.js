@@ -1,11 +1,26 @@
 import React, { Component } from 'react';
 
-export default class Subtraction extends Component {
+
+class Subtraction extends Component {
+
+    constructor(props){
+        super(props);
+
+        this.state ={
+            name: "operation"
+        };
+    }
+    
     render() {
-        return (
-            <div>
-                subtraction
-            </div>
-        );
+        const {valueOne, valueTwo } = this.props;
+        const valueAnswer = valueOne - valueTwo;
+            return(
+                <div>
+                    {valueOne} - {valueTwo} = {valueAnswer}
+                </div>
+            )
     }
 }
+
+
+export default Subtraction;

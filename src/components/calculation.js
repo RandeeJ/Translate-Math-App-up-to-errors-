@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from "react-redux";
 import Addition from './operations/addition';
 import Subtraction from "./operations/subtraction";
 import Multiplication from './operations/multiplication';
@@ -6,20 +7,16 @@ import Multiplication from './operations/multiplication';
 
 
 class Calculation extends Component {
-
-    constructor(props){
-        super(props); 
-
-        this.state = {
+ 
+        state = {
             name: "operation",
             showHideAddition: false,
             showHideMultiplication: false,
             showHideSubtraction: false
         }
-        this.hideCalculation = this.hideCalculation.bind(this);
-    }
+    
 
-hideCalculation(name){
+hideCalculation = (name) => {
     switch(name){
         case "showHideAddition":
             this.setState({
@@ -56,7 +53,6 @@ hideCalculation(name){
     
 
     render() {
-        const {valueOne, valueTwo } = this.props;
         const {showHideAddition, showHideMultiplication, showHideSubtraction} = this.state
         
         return (
@@ -78,15 +74,32 @@ hideCalculation(name){
 
 
             <div className = "calculation__view">
-                {showHideAddition && <Addition className="calculation__view-addition" valueOne={valueOne} valueTwo={valueTwo}/>}
-                {showHideSubtraction && <Subtraction className="calculation__view-subtraction" valueOne={valueOne} valueTwo={valueTwo}/>}
-                {showHideMultiplication && <Multiplication className="calculation__view-multiplication" valueOne={valueOne} valueTwo={valueTwo}/>}
+                {showHideAddition && <Addition className="calculation__view-addition" 
+                valueOne={this.props.valueOne} valueTwo={this.props.valueTwo}
+                />}
+                {showHideSubtraction && <Subtraction className="calculation__view-subtraction" 
+                // valueOne={valueOne} valueTwo={valueTwo}
+                />}
+                {showHideMultiplication && <Multiplication className="calculation__view-multiplication" 
+                // valueOne={valueOne} valueTwo={valueTwo}
+                />}
             </div>
             </div>
         );
     }
 }
 
-export default Calculation
+const mapStateToProps = (state) => {
+    console.log("mapStateToProps", state);
+    return{
+      valueOne: state.valueOne,
+      valueTwo: state.valueTwo,
+    //   valueAnswer: state.valueAnswer
+    }
+  }
+
+export default connect(mapStateToProps)(Calculation);
+// export default Calculation;
 
 
+// https://www.youtube.com/watch?v=qdAThMLtF98&list=PLC3y8-rFHvwheJHvseC3I0HuYI2f46oAK&index=6&ab_channel=Codevolution

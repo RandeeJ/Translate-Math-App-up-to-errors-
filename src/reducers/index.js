@@ -1,7 +1,13 @@
 import { combineReducers } from 'redux';
+import OperationReducer from "./operationReducers/additionReducer";
 
-const rootReducer = combineReducers({
-  state: (state = {}) => state
+const allReducers = combineReducers({
+  // state: (state = {}) => state;
+
+  valueAnswer: OperationReducer,
+  // subtractionAnswer: SubtractionReducer,
+  // multiplicationAnswer: MultiplicationReducer
+
 });
 
-export default rootReducer;
+// export default allReducers;

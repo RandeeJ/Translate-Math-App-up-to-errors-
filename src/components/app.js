@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import Calculator from './calculator';
 
-export default class App extends Component {
+class App extends Component {
 
-  constructor(props){
-    super(props);
-    this.state = {
+  // constructor(props){
+  //   super(props);
+    // this.
+    state = {
         valueOne: "",
-        valueTwo: ""
+        valueTwo: "",
   }
-  this.handleChange = this.handleChange.bind(this);
-  }
+  
 
 // YOU CAN SET UP EACH INPUT TO HAVE ITS OWN HANDLE CHANGE FUNCTION...
 // setValueOne = e =>  {
@@ -26,14 +26,16 @@ export default class App extends Component {
 // ... OR SET UP A HANDLE CHANGE FUNCTION THAT CAN BE USED BY ALL
 // https://medium.com/the-andela-way/handling-user-input-in-react-crud-1396e51a70bf
 handleChange = ({ target }) => {
-this.setState({ [ target.name ] : target.value});
+  this.setState({ [ target.name ] : target.value});
 };
 
   render() {
 
+
         const valueOne = Number(this.state.valueOne);
         const valueTwo = Number(this.state.valueTwo);
-        const { className } = this.props;
+        // const valueAnswer = ;
+        // const { className } = this.props;
 
     return (
       <div>
@@ -43,9 +45,9 @@ this.setState({ [ target.name ] : target.value});
           </div>
 
           <div className="userInput">
-            <form className={`${className} number`}>
+            <form className="userInput-form">
                 <input type="number" 
-                className="number__valueOne"
+                className="userInput-form__valueOne"
                 placeholder="Your First Value"
                 // IT WAS IMPORTANT TO SET THE NAME HERE SO THAT THIS.STATE AND TARGET COULD BE INTERACTED WITH
                 name="valueOne"
@@ -53,7 +55,7 @@ this.setState({ [ target.name ] : target.value});
                 value = {valueOne}
                 />
                 <input type="number" 
-                className="number__valueTwo"
+                className="userInput-form__valueTwo"
                 placeholder="Your Second Value"
                 name= "valueTwo"
                 onChange={this.handleChange}
@@ -70,5 +72,15 @@ this.setState({ [ target.name ] : target.value});
       </div>
 
     );
+    }
+  }
+
+const mapStateToProps = (state) => {
+  console.log("mapStateToProps", state);
+  return{
+    valueAnswer: state.valueAnswer
   }
 }
+
+export default connect (mapStateToProps)(App);
+// export default App;

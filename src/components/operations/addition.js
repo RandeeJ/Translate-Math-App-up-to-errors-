@@ -4,13 +4,11 @@ import Translation from "../translation"
 
 class Addition extends Component {
 
-    constructor(props){
-        super(props);
-
-        this.state ={
-            name: "operation"
+        state ={
+            name: "operation",
+            valueAnswer : ""
         };
-    }
+    
     
     render() {
         const {valueOne, valueTwo } = this.props;
@@ -28,8 +26,11 @@ class Addition extends Component {
 }
 }
 
-export default Addition;
+const mapStateToProps = (state) => {
+    return{
+        valueOne: state.valueOne,
+        valueTwo: state.valueTwo,
+      }
+}
 
-
-// thinking about how to render the equation when the button is clicked
-// componentdidmount - does that mean when the button is clicked that thats when everything will show?
+export default connect(mapStateToProps)(Addition);

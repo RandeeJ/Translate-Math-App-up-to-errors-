@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import n2words from 'n2words';
 
 
+
 class English extends Component {
     constructor(props){
         super(props);
@@ -31,22 +32,25 @@ class English extends Component {
         const englishTwo = n2words(valueTwo, {lang: 'en'}).replace("minus", "negative");
         const englishAnswer = n2words(valueAnswer, {lang: 'en'}).replace("minus", "negative");
         
+        // LOOK INTO REPLACE FUNCTION TO SUBSTITUTE NEGATIVE IN FOR MINUS
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+        // https://www.w3schools.com/jsref/jsref_replace.asp
         
-        const { languageTitle, 
+        const { languageTitle
             // operation 
         } = this.state;
 
-        console.log("english component", valueOne)
+        console.log("english component", valueOne, 
+        // valueAnswer
+        )
 
         return (
             <div>
                 <h2>{languageTitle} translation</h2>
 
-                <div>
                 {englishOne} {operation} {englishTwo} = {englishAnswer}
 
 
-                </div>
             </div>
         );
     }

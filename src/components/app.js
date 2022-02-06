@@ -75,12 +75,12 @@ handleChange = ({ target }) => {
     }
   }
 
-const mapStateToProps = (state) => {
-  console.log("mapStateToProps", state);
-  return{
-    valueAnswer: state.valueAnswer
-  }
-}
+// const mapStateToProps = (state) => {
+//   console.log("mapStateToProps", state);
+//   return{
+//     valueAnswer: state.valueAnswer
+//   }
+// }
 
-export default connect (mapStateToProps)(App);
-// export default App;
+// export default connect (mapStateToProps)(App);
+export default App;

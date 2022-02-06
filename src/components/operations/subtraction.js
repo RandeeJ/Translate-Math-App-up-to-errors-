@@ -15,8 +15,7 @@ class Subtraction extends Component {
     render() {
         const {valueOne, valueTwo } = this.props;
         const valueAnswer = valueOne - valueTwo;
-        const minus = " - ";
-        
+        const minus = " - ";        
             return(
                 <div>
                     {valueOne} - {valueTwo} = {valueAnswer}

@@ -4,33 +4,27 @@ import Translation from "../translation"
 
 class Addition extends Component {
 
-        state ={
-            name: "operation",
-            valueAnswer : ""
+    constructor(props){
+        super(props);
+
+        this.state ={
+            name: "operation"
         };
-    
+    }
     
     render() {
         const {valueOne, valueTwo } = this.props;
         const valueAnswer = valueOne + valueTwo;
         const plus = " + ";
-
             return(
                 <div>
                     {valueOne} + {valueTwo} = {valueAnswer}
                
-                <Translation valueOne = {valueOne} valueTwo = {valueTwo} valueAnswer = {valueAnswer} operation={plus}/>
+                    <Translation valueOne = {valueOne} valueTwo = {valueTwo} valueAnswer = {valueAnswer} operation={plus}/>
                 </div>
             )
     
 }
 }
 
-const mapStateToProps = (state) => {
-    return{
-        valueOne: state.valueOne,
-        valueTwo: state.valueTwo,
-      }
-}
-
-export default connect(mapStateToProps)(Addition);
+export default Addition;

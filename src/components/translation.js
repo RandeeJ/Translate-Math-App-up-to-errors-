@@ -56,9 +56,6 @@ hideTranslation(name){
 }
 
     
-
-    
-
     render() {
         const {valueOne, valueTwo, valueAnswer, operation } = this.props;
         const {showHideEnglish, showHideSpanish, showHideFrench} = this.state

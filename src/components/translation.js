@@ -7,7 +7,6 @@ import French from './languages/french';
 
 
 
-
 class Translation extends Component {
 
     constructor(props){
@@ -17,12 +16,14 @@ class Translation extends Component {
             name: "language",
             showHideEnglish: false,
             showHideSpanish: false,
-            showHideFrench: false
+            showHideFrench: false,
         }
         this.hideTranslation = this.hideTranslation.bind(this);
     }
 
 hideTranslation(name){
+
+
     switch(name){
         case "showHideEnglish":
             this.setState({
@@ -59,7 +60,7 @@ hideTranslation(name){
     
 
     render() {
-        const {valueOne, valueTwo } = this.props;
+        const {valueOne, valueTwo} = this.props;
         const {showHideEnglish, showHideSpanish, showHideFrench} = this.state
         
         return (
@@ -91,41 +92,3 @@ hideTranslation(name){
 }
 
 export default Translation
-
-
-
-
-
-
-
-
-
-
-
-// class Translation extends Component {
-
-//     constructor(props){
-//         super(props)
-//     }
-    
-//     render() {
-//            const {valueOne, valueTwo} = this.props;
-//         return (
-
-//             <div>
-               
-//                    Show translation here
-//                     <Switch>
-//                         {/* <Route exact path ="/" component={Default} /> */}
-//                         <Route path="/english" component={English} valueOne={valueOne}/>
-//                         <Route path="/spanish" component={Spanish} />
-//                         <Route path="/french" component={French} />
-
-
-//                     </Switch>
-
-//             </div>
-//         );
-//     }}
-
-//     export default Translation;

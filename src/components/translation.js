@@ -59,7 +59,7 @@ hideTranslation(name){
     
 
     render() {
-        const {valueOne, valueTwo } = this.props;
+        const {valueOne, valueTwo, valueAnswer, operation } = this.props;
         const {showHideEnglish, showHideSpanish, showHideFrench} = this.state
         
         return (
@@ -81,9 +81,9 @@ hideTranslation(name){
 
 
             <div className = "translation__view">
-                {showHideEnglish && <English className="translation__view-english" valueOne={valueOne} valueTwo={valueTwo}/>}
-                {showHideFrench && <French className="translation__view-french" valueOne={valueOne} valueTwo={valueTwo}/>}
-                {showHideSpanish && <Spanish className="translation__view-spanish" valueOne={valueOne} valueTwo={valueTwo}/>}
+                {showHideEnglish && <English className="translation__view-english" valueOne={valueOne} valueTwo={valueTwo} valueAnswer={valueAnswer} operation={operation}/>}
+                {showHideFrench && <French className="translation__view-french" valueOne={valueOne} valueTwo={valueTwo} valueAnswer={valueAnswer} operation={operation}/>}
+                {showHideSpanish && <Spanish className="translation__view-spanish" valueOne={valueOne} valueTwo={valueTwo} valueAnswer={valueAnswer} operation={operation}/>}
             </div>
             </div>
         );

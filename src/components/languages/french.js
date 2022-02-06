@@ -14,20 +14,29 @@ export default class French extends Component {
 
         var n2words = require('n2words');
 
-        const one = n2words(123);
-        const two = n2words(123, {lang: 'fr'}) ;
+        const {valueOne, valueTwo,
+            valueAnswer, operation
+        } = this.props;
+
+        const frenchOne = n2words(valueOne, {lang: 'fr'});
+        const frenchTwo = n2words(valueTwo, {lang: 'fr'});
+        const frenchAnswer = n2words(valueAnswer, {lang: 'fr'})
         
-        const { languageTitle } = this.state
+        
+        const { languageTitle, 
+            // operation 
+        } = this.state;
+
+        console.log("french component", valueOne)
+
         return (
             <div>
                 <h2>{languageTitle} translation</h2>
 
                 <div>
-                {one}
-                </div>
+                {frenchOne} {operation} {frenchTwo} = {frenchAnswer}
 
-                <div>
-                {two}
+
                 </div>
             </div>
         );

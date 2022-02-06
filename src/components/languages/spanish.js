@@ -14,20 +14,29 @@ export default class Spanish extends Component {
 
         var n2words = require('n2words');
 
-        const one = n2words(123);
-        const three = n2words(123, {lang: 'es'}) ;
+        const {valueOne, valueTwo,
+            valueAnswer, operation
+        } = this.props;
+
+        const spanishOne = n2words(valueOne, {lang: 'es'});
+        const spanishTwo = n2words(valueTwo, {lang: 'es'});
+        const spanishAnswer = n2words(valueAnswer, {lang: 'es'})
         
-        const { languageTitle } = this.state
+        
+        const { languageTitle, 
+            // operation 
+        } = this.state;
+
+        console.log("spanish component", valueOne)
+
         return (
             <div>
-                    <h2>{languageTitle} translation</h2>
-                    
-                <div>
-                    {one}
-                </div>
+                <h2>{languageTitle} translation</h2>
 
                 <div>
-                    {three}
+                {spanishOne} {operation} {spanishTwo} = {spanishAnswer}
+
+
                 </div>
             </div>
         );

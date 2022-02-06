@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Translation from '../translation';
 
 
 class Subtraction extends Component {
@@ -14,9 +15,13 @@ class Subtraction extends Component {
     render() {
         const {valueOne, valueTwo } = this.props;
         const valueAnswer = valueOne - valueTwo;
+        const minus = " - ";
+        
             return(
                 <div>
                     {valueOne} - {valueTwo} = {valueAnswer}
+
+                    <Translation valueOne = {valueOne} valueTwo = {valueTwo} valueAnswer={valueAnswer} operation={minus}/>
                 </div>
             )
     }

@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-
-// import Language from './language';
-import Translation from './translation';
 import Calculator from './calculator';
 
 export default class App extends Component {
@@ -68,15 +65,7 @@ this.setState({ [ target.name ] : target.value});
             <Calculator valueOne={valueOne} valueTwo={valueTwo}/>
           </div>
 
-          <div className="language_container">
-            {/* <Language /> */}
-          </div>
-
-          <div className="translation-container">
-            <div className='display-calculation-container'>
-            <Translation valueOne={valueOne} valueTwo={valueTwo}/>
-            </div>
-          </div>
+          
       </div>
       </div>
 

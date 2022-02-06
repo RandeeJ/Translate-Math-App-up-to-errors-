@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Translation from '../translation';
+
 
 
 class Multiplication extends Component {
@@ -14,9 +16,13 @@ class Multiplication extends Component {
     render() {
         const {valueOne, valueTwo } = this.props;
         const valueAnswer = valueOne * valueTwo;
+        const minus = " x ";
             return(
                 <div>
                     {valueOne} * {valueTwo} = {valueAnswer}
+
+                    <Translation valueOne = {valueOne} valueTwo = {valueTwo} valueAnswer={valueAnswer} operation={minus}/>
+
                 </div>
             )
     }

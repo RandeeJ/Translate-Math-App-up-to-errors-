@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import Default from "./languages/default";
 import English from './languages/english';
 import Spanish from "./languages/spanish";
 import French from './languages/french';
@@ -78,11 +77,11 @@ hideTranslation(name){
 
 
 
-            <div className = "translation__view">
-                {showHideEnglish && <English className="translation__view-english" valueOne={valueOne} valueTwo={valueTwo} valueAnswer={valueAnswer} operation={operation}/>}
-                {showHideFrench && <French className="translation__view-french" valueOne={valueOne} valueTwo={valueTwo} valueAnswer={valueAnswer} operation={operation}/>}
-                {showHideSpanish && <Spanish className="translation__view-spanish" valueOne={valueOne} valueTwo={valueTwo} valueAnswer={valueAnswer} operation={operation}/>}
-            </div>
+                <div className = "translation__view">
+                    {showHideEnglish && <English className="translation__view-english" valueOne={valueOne} valueTwo={valueTwo} valueAnswer={valueAnswer} operation={operation}/>}
+                    {showHideFrench && <French className="translation__view-french" valueOne={valueOne} valueTwo={valueTwo} valueAnswer={valueAnswer} operation={operation}/>}
+                    {showHideSpanish && <Spanish className="translation__view-spanish" valueOne={valueOne} valueTwo={valueTwo} valueAnswer={valueAnswer} operation={operation}/>}
+                </div>
             </div>
         );
     }

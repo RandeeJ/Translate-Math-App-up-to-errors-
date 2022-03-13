@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import n2words from 'n2words';
+import CalculationHistory from '../history';
 
 
 export default class French extends Component {
@@ -31,11 +32,14 @@ export default class French extends Component {
 
         return (
             <div>
-                <h2>{languageTitle} translation</h2>
+                <div className='french-translation'>
+                    <h2>{languageTitle} translation</h2>
 
-                <div>
-                {frenchOne} {operation} {frenchTwo} = {frenchAnswer}
+                    <div className='translation'>
+                        {frenchOne} {operation} {frenchTwo} = {frenchAnswer}
+                    </div>
 
+                    <CalculationHistory/>
 
                 </div>
             </div>

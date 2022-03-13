@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
+
 import Calculator from './calculator';
+// import CalculationHistory from './history';
 
 class App extends Component {
+  
 
-  // constructor(props){
-  //   super(props);
-    // this.
+
     state = {
         valueOne: "",
         valueTwo: "",
   }
-  
-
 // YOU CAN SET UP EACH INPUT TO HAVE ITS OWN HANDLE CHANGE FUNCTION...
 // setValueOne = e =>  {
 //     this.setState({ valueOne: e.target.value})
@@ -25,6 +24,10 @@ class App extends Component {
 
 // ... OR SET UP A HANDLE CHANGE FUNCTION THAT CAN BE USED BY ALL
 // https://medium.com/the-andela-way/handling-user-input-in-react-crud-1396e51a70bf
+
+
+
+
 handleChange = ({ target }) => {
   this.setState({ [ target.name ] : target.value});
 };
@@ -45,7 +48,7 @@ handleChange = ({ target }) => {
           </div>
 
           <div className="userInput">
-            <form className="userInput-form">
+            <form className="userInput-form" method="POST">
                 <input type="number" 
                 className="userInput-form__valueOne"
                 placeholder="Your First Value"
@@ -61,13 +64,21 @@ handleChange = ({ target }) => {
                 onChange={this.handleChange}
                 value = {valueTwo} 
                 />
+                {/* <input type="submit" /> */}
             </form>
 
           <div className="calculator-container">
             <Calculator valueOne={valueOne} valueTwo={valueTwo}/>
           </div>
 
+
+
           
+
+
+          {/* <div className='calculation-history-container'>
+            <CalculationHistory valueOne={valueOne} valueTwo={valueTwo}/>
+          </div> */}
       </div>
       </div>
 

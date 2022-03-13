@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import n2words from 'n2words';
+import CalculationHistory from '../history';
 
 
 
@@ -8,17 +9,10 @@ class English extends Component {
         super(props);
 
         this.state={
-            languageTitle: "English",
-            // operation: {
-            //     addition: "+",
-            //     subtraction: 
-            // }
+            languageTitle: "English"
         }
     }
 
-  // LOOK INTO REPLACE FUNCTION TO SUBSTITUTE NEGATIVE IN FOR MINUS
-        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
-        // https://www.w3schools.com/jsref/jsref_replace.asp
 
     render() {
 
@@ -36,19 +30,23 @@ class English extends Component {
         // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
         // https://www.w3schools.com/jsref/jsref_replace.asp
         
-        const { languageTitle
-            // operation 
-        } = this.state;
+        const { languageTitle } = this.state;
 
-        console.log("english component", valueOne, 
+        // console.log("english component", valueOne, 
         // valueAnswer
-        )
+        // )
 
         return (
             <div>
-                <h2>{languageTitle} translation</h2>
+                <div className='english-translation'>
+                    <h2>{languageTitle} translation</h2>
 
-                {englishOne} {operation} {englishTwo} = {englishAnswer}
+                    <div className='translation'>
+                        {englishOne} {operation} {englishTwo} = {englishAnswer}
+                    </div>
+                </div>
+
+                <CalculationHistory/>
 
 
             </div>
